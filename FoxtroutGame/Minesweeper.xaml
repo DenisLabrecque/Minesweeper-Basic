@@ -1,0 +1,315 @@
+﻿<Page
+    x:Class="FoxtroutGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FoxtroutGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:local1="using:FoxtrotGame"
+   mc:Ignorable="d">
+
+
+   
+
+   <!-- style the game grid tiles -->
+   <Page.Resources>
+      
+      <Style TargetType="ListViewItem" x:Key="ListViewItem">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="FontWeight" Value="ExtraBlack"/>
+         <Setter Property="Foreground" Value="DarkBlue"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="Tile0">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="Transparent"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="Tile1" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="DarkBlue"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="Tile2" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="Green"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="Tile3" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="Red"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="Tile4" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="Purple"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="TileM" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="LightGray"/>
+         <Setter Property="Foreground" Value="DarkGoldenrod"/>
+      </Style>
+
+      <Style TargetType="ListViewItem" x:Key="TileExploded" BasedOn="{StaticResource ListViewItem}">
+         <Setter Property="MinWidth" Value="30"/>
+         <Setter Property="MinHeight" Value="30"/>
+         <Setter Property="MaxWidth" Value="30"/>
+         <Setter Property="MaxHeight" Value="30"/>
+         <Setter Property="Padding" Value="2, 2, 2, 2"/>
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="1"/>
+         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         <Setter Property="Background" Value="Red"/>
+         <Setter Property="Foreground" Value="Black"/>
+      </Style>
+
+      <Style TargetType="StackPanel" x:Key="mainGameBoard">
+         <Setter Property="BorderBrush" Value="SlateGray"/>
+         <Setter Property="BorderThickness" Value="0"/>
+      </Style>
+
+      <Style TargetType="TextBlock" x:Key="FlyoutTitleText">
+         <Setter Property="Padding" Value="0, 15, 0, 10"/>
+         <Setter Property="FontWeight" Value="Bold"/>
+         <Setter Property="FontFamily" Value="Font/Small LCD Sign.ttf#Small LCD Sign"/>
+         <Setter Property="Foreground" Value="{ThemeResource AppBarSeparatorForegroundThemeBrush}"/>
+      </Style>
+
+      <Style TargetType="TextBlock" x:Key="GameStats">
+         <Setter Property="FontSize" Value="28"/>
+         <Setter Property="Foreground" Value="{ThemeResource AppBarSeparatorForegroundThemeBrush}"/>
+         <Setter Property="Padding" Value="10, 5"/>
+         <Setter Property="FontFamily" Value="Font/Small LCD Sign.ttf#Small LCD Sign"/>
+      </Style>
+
+      <Style TargetType="TextBlock" x:Key="GameHeader">
+         <Setter Property="FontSize" Value="16"/>
+         <Setter Property="Foreground" Value="{ThemeResource AppBarSeparatorForegroundThemeBrush}"/>
+         <Setter Property="FontFamily" Value="Font/Small LCD Sign.ttf#Small LCD Sign"/>
+         <Setter Property="FontWeight" Value="Bold"/>
+         <Setter Property="Padding" Value="20,20"/>
+      </Style>
+
+      <Style TargetType="TextBlock">
+         <Setter Property="TextWrapping" Value="Wrap"/>
+         <Setter Property="Margin" Value="0, 0, 0, 10"/>
+      </Style>
+
+
+   </Page.Resources>
+
+
+   <Grid Name="mainGrid" Background="WhiteSmoke" ScrollViewer.VerticalScrollMode="Enabled">
+      <Grid.ContextFlyout>
+         <Flyout Placement="Bottom" LightDismissOverlayMode="On" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False">
+            <StackPanel>
+               <TextBlock FontWeight="Bold" x:Uid="newBadgeEarned"></TextBlock>
+               <StackPanel Width="150" Height="150" Padding="5,5,5,5" VerticalAlignment="Center">
+                  <TextBlock FontSize="70" HorizontalAlignment="Center" Name="newBadgeIcon">🐻</TextBlock>
+                  <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Name="newBadgeTitle"></TextBlock>
+               </StackPanel>
+               <TextBlock Name="newBadgeDescription" TextWrapping="WrapWholeWords" MaxWidth="350"></TextBlock>
+            </StackPanel>
+         </Flyout>
+      </Grid.ContextFlyout>
+
+      <Pivot>
+         <PivotItem x:Uid="gameTab">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+               <StackPanel VerticalAlignment="Center">
+
+                  <MediaElement x:Name="soundPlayer" AutoPlay="True" />
+
+                  <!-- game title -->
+                  <TextBlock Name="banner" Style="{ThemeResource GameStats}" HorizontalAlignment="Center" x:Uid="gameDisplayName"></TextBlock>
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                     <TextBlock Name="revealedIndicator" Style="{ThemeResource GameHeader}" HorizontalAlignment="Center" x:Uid="tilesRevealed"></TextBlock>
+                     <TextBlock Name="minesIndicator" Style="{ThemeResource GameHeader}" HorizontalAlignment="Center" x:Uid="numberOfMines"></TextBlock>
+                     <TextBlock Name="timeIndicator" Style="{ThemeResource GameHeader}" HorizontalAlignment="Center" x:Uid="timeIndicator"></TextBlock>
+                  </StackPanel>
+
+
+                  <!-- game grid -->
+                  <StackPanel x:Name="mainGameBoard" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                     <!-- this stack panel only allows ListViews because of the code-behind -->
+                  </StackPanel>
+
+
+                  <!-- buttons -->
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                     <Button x:Name="startNewGame" Style="{ThemeResource TextBlockButtonStyle}" Padding="20" VerticalAlignment="Center" HorizontalAlignment="Center" IsTabStop="False" FontFamily="Font/Small LCD Sign.ttf#Small LCD Sign" FontWeight="Bold" x:Uid="restartButton" IsDoubleTapEnabled="True">
+                        <Button.Flyout>
+                           <Flyout x:Name="newGameSettings" LightDismissOverlayMode="On">
+                              <Flyout.FlyoutPresenterStyle>
+                                 <Style TargetType="FlyoutPresenter">
+                                    <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled"/>
+                                    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+                                    <Setter Property="IsTabStop" Value="True"/>
+                                    <Setter Property="TabNavigation" Value="Cycle"/>
+                                 </Style>
+                              </Flyout.FlyoutPresenterStyle>
+
+                              <!-- flyout content here -->
+                              <StackPanel>
+                                 <!-- select difficulty -->
+                                 <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="difficultySettingLabel"></TextBlock>
+                                 <ListView x:Name="difficultySettings" SelectionChanged="DifficultySettings_SelectionChanged">
+                                    <ListViewItem MinHeight="30" x:Uid="difficulty0"></ListViewItem>
+                                    <ListViewItem MinHeight="30" x:Uid="difficulty1"></ListViewItem>
+                                    <ListViewItem MinHeight="30" x:Uid="difficulty2"></ListViewItem>
+                                    <ListViewItem MinHeight="30" x:Uid="difficulty3"></ListViewItem>
+                                    <ListViewItem MinHeight="30" x:Uid="difficulty4"></ListViewItem>
+                                 </ListView>
+
+                                 <!-- select grid size -->
+                                 <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="gameSizeSettingLabel"></TextBlock>
+                                 <StackPanel Orientation="Horizontal">
+                                    <Button Name="decrementGridSize" Content="‹" Click="DecrementGridSize_Click"/>
+                                    <TextBox Name="gridSize" IsReadOnly="True"></TextBox>
+                                    <Button Name="incrementGridSize" Content="›" Click="IncrementGridSize_Click"></Button>
+                                 </StackPanel>
+
+                                 <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="restartGameLabel"></TextBlock>
+                                 <Button x:Name="reset" Click="Reset_Click" HorizontalAlignment="Stretch" x:Uid="startButton"></Button>
+                              </StackPanel>
+                           </Flyout>
+                        </Button.Flyout>
+                     </Button>
+                  </StackPanel>
+               </StackPanel>
+            </ScrollViewer>
+         </PivotItem>
+
+         <PivotItem x:Uid="sessionStatistics">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+               <StackPanel>
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="objectiveBadgesTitle"></TextBlock>
+                  <!-- achievement badges -->
+                  <GridView Name="achievementBadges" SelectionMode="None" ItemsSource="{x:Bind statistics.Objectives}">
+                     <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="local1:Objective">
+                           <StackPanel Width="150" Height="150" Padding="5,5,5,5" ToolTipService.ToolTip="{x:Bind Description}" Opacity="{x:Bind Opacity}" VerticalAlignment="Center">
+                              <TextBlock Text="{x:Bind Icon}" FontSize="70" HorizontalAlignment="Center"></TextBlock>
+                              <TextBlock Text="{x:Bind Title}" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="WrapWholeWords"></TextBlock>
+                              <TextBlock HorizontalAlignment="Center" FontSize="12"><Run Text="{x:Bind AccomplishedNumberOfTimes}"></Run>x</TextBlock>
+                           </StackPanel>
+                           <!--<TextBlock Text="{x:Bind Title}"></TextBlock>-->
+                        </DataTemplate>
+                     </GridView.ItemTemplate>
+                  </GridView>
+
+                  <Grid>
+                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition MaxWidth="400"/>
+                     </Grid.ColumnDefinitions>
+                     <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                     </Grid.RowDefinitions>
+
+                     <TextBlock Style="{ThemeResource FlyoutTitleText}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0" x:Uid="gamesPlayedLabel"></TextBlock>
+                     <TextBlock Name="gamesPlayedStatistic" Style="{ThemeResource TitleTextBlockStyle}" Grid.Column="1" Grid.Row="0">-</TextBlock>
+
+                     <TextBlock Style="{ThemeResource FlyoutTitleText}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" x:Uid="gamesWonLabel"></TextBlock>
+                     <TextBlock Name="gamesWonStatistic" Style="{ThemeResource TitleTextBlockStyle}" Grid.Column="1" Grid.Row="1">-</TextBlock>
+
+                     <TextBlock Style="{ThemeResource FlyoutTitleText}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="2" x:Uid="gamesLostLabel"></TextBlock>
+                     <TextBlock Name="gamesLostStatistic" Style="{ThemeResource TitleTextBlockStyle}" Grid.Column="1" Grid.Row="2">-</TextBlock>
+
+                     <TextBlock Style="{ThemeResource FlyoutTitleText}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="3" x:Uid="averageGameTimeLabel"></TextBlock>
+                     <TextBlock Name="averageGameTimeStatistic" Style="{ThemeResource TitleTextBlockStyle}" Grid.Column="1" Grid.Row="3">-</TextBlock>
+                  </Grid>
+               </StackPanel>
+            </ScrollViewer>
+         </PivotItem>
+         <PivotItem x:Uid="aboutApp">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+               <StackPanel>
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="gameGoalLabel"></TextBlock>
+                  <TextBlock x:Uid="gameGoalParagraph"></TextBlock>
+
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="rulesLabel"></TextBlock>
+                  <TextBlock x:Uid="rulesParagraph"></TextBlock>
+
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="historyLabel"></TextBlock>
+                  <TextBlock x:Uid="historyParagraph1"></TextBlock>
+
+                  <TextBlock x:Uid="historyParagraph2"></TextBlock>
+
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="fromTheProgrammerLabel"></TextBlock>
+                  <TextBlock><Run x:Uid="programmerParagraph1"></Run> <Hyperlink NavigateUri="http://denislabrecque.ca">Denis Labrecque</Hyperlink>, <Run x:Uid="programmerParagraph2"></Run> <Hyperlink NavigateUri="http://www.pcci.edu/">Pensacola Christian College</Hyperlink>. <Run x:Uid="programmerParagraph3"></Run></TextBlock>
+                  <TextBlock x:Uid="programmerParagraph4"></TextBlock>
+
+                  <TextBlock Style="{ThemeResource FlyoutTitleText}" x:Uid="creditsLabel"></TextBlock>
+                  <TextBlock><Run x:Uid="explosionNoiseCredit1"></Run> <Hyperlink NavigateUri="https://freesound.org/people/Deganoth/"><Run x:Uid="explosionNoiseCredit3"></Run></Hyperlink>, <Run x:Uid="underCC"></Run>.</TextBlock>
+
+                  <TextBlock><Run x:Uid="winNoiseCredit1"></Run> <Hyperlink NavigateUri="https://freesound.org/people/LittleRobotSoundFactory/">LittleRobotSoundFactory</Hyperlink>, <Run x:Uid="underCC"></Run>.</TextBlock>
+
+                  <TextBlock><Run x:Uid="fontsCredit1"></Run> <Hyperlink NavigateUri="https://www.dafont.com/small-lcd-sign.font">Small LCD Sign</Hyperlink> <Run x:Uid="fontsCredit3"></Run>.</TextBlock>
+               </StackPanel>
+            </ScrollViewer>
+         </PivotItem>
+      </Pivot>
+   </Grid>
+</Page>
+   
+   

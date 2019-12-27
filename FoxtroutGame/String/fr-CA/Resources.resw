@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutApp.Header" xml:space="preserve">
+    <value>À propos</value>
+    <comment>about top tab</comment>
+  </data>
+  <data name="averageGameTimeLabel.Text" xml:space="preserve">
+    <value>Temps moyen</value>
+  </data>
+  <data name="creditsLabel.Text" xml:space="preserve">
+    <value>Crédits</value>
+  </data>
+  <data name="difficulty0.Content" xml:space="preserve">
+    <value>Simplifié</value>
+  </data>
+  <data name="difficulty1.Content" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="difficulty2.Content" xml:space="preserve">
+    <value>Difficile</value>
+  </data>
+  <data name="difficulty3.Content" xml:space="preserve">
+    <value>Doctorat</value>
+  </data>
+  <data name="difficulty4.Content" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="difficultySettingLabel.Text" xml:space="preserve">
+    <value>Difficulté</value>
+    <comment>flyout difficulty label</comment>
+  </data>
+  <data name="explosionNoiseCredit3.Text" xml:space="preserve">
+    <value>Deganoth</value>
+  </data>
+  <data name="explosionNoiseCredit1.Text" xml:space="preserve">
+    <value>Bruit d’explosion par</value>
+  </data>
+  <data name="fontsCredit1.Text" xml:space="preserve">
+    <value>Police de texte</value>
+  </data>
+  <data name="fontsCredit3.Text" xml:space="preserve">
+    <value>par myname5749</value>
+  </data>
+  <data name="fromTheProgrammerLabel.Text" xml:space="preserve">
+    <value>Mot du programmeur</value>
+  </data>
+  <data name="gameDisplayName.Text" xml:space="preserve">
+    <value>Démineur</value>
+    <comment>used for display in-game, not same as game title</comment>
+  </data>
+  <data name="gameGoalLabel.Text" xml:space="preserve">
+    <value>But du jeu</value>
+  </data>
+  <data name="gameGoalParagraph.Text" xml:space="preserve">
+    <value>Révélez toutes les cases vides sans toucher aucune mine.</value>
+  </data>
+  <data name="gameSizeSettingLabel.Text" xml:space="preserve">
+    <value>Grandeur du jeu</value>
+  </data>
+  <data name="gamesLostLabel.Text" xml:space="preserve">
+    <value>Jeux perdus</value>
+  </data>
+  <data name="gamesPlayedLabel.Text" xml:space="preserve">
+    <value>Jeux joués</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Démineur Éssentiel</value>
+    <comment>official app name</comment>
+  </data>
+  <data name="gamesWonLabel.Text" xml:space="preserve">
+    <value>Jeux gagnés</value>
+  </data>
+  <data name="gameTab.Header" xml:space="preserve">
+    <value>Jeu</value>
+    <comment>top tab</comment>
+  </data>
+  <data name="historyLabel.Text" xml:space="preserve">
+    <value>Histoire du jeu</value>
+  </data>
+  <data name="historyParagraph1.Text" xml:space="preserve">
+    <value>En 1998, Curt Johnson, programmeur Microsoft, écrivit un jeu qui avait pour objectif d’aller d’un coin à l’autre d’un champ de mines. Robert Donner, son collègue de travail, utilisa ce code pour en faire sa propre version du jeu, appelée “Mine,” en fin de semaine. Ce jeu fut graduellement modifié et échangé entre employés.</value>
+  </data>
+  <data name="historyParagraph2.Text" xml:space="preserve">
+    <value>En 1990, les programmeurs Microsoft furent invités à soumettre des jeux pour Windows 3.0, et “Mine,” maintenant aussi connu sous le nom de “Winmine,” fut accepté. Avec des graphiques retouchés et un nouveau nom, Minesweeper devint bien connu: en 1992, le jeu fut inclus dans Windows 3.2, ainsi que Solitaire. Il ferait dès lors partie de Windows 95, Windows 98, Windows 2000, Windows XP, Windows Vista, et Windows 7.</value>
+  </data>
+  <data name="numberOfMines.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Nombre de mines</value>
+  </data>
+  <data name="programmerParagraph1.Text" xml:space="preserve">
+    <value>Bonjour! Je suis</value>
+  </data>
+  <data name="programmerParagraph2.Text" xml:space="preserve">
+    <value>un étudiant canadien en programmation et design graphique à</value>
+  </data>
+  <data name="programmerParagraph3.Text" xml:space="preserve">
+    <value>Ces cours m’ont mené à récréer Minesweeper comme projet final en programmation .NET avec C#.</value>
+  </data>
+  <data name="programmerParagraph4.Text" xml:space="preserve">
+    <value>Bâtir un projet fonctionnel du jeu m’a pris seulement un jour. Cependant, faire fonctionner la situation gagnante a pris un peu plus de travail. La partie la plus difficile de la programmation de ce jeu a été de créér la méthode qui révèle les carreaux vides aux côtés adjacents. J’ai du la réécrire avec un esprit reposé, et cela m’a pris trois heures et demi de travail, même avec mon expérience précédente.</value>
+  </data>
+  <data name="restartGameLabel.Text" xml:space="preserve">
+    <value>Prêt</value>
+  </data>
+  <data name="rulesLabel.Text" xml:space="preserve">
+    <value>Règles</value>
+  </data>
+  <data name="rulesParagraph.Text" xml:space="preserve">
+    <value>Le premier clic est toujours une case vide; un certain nombre de mines est alors distribué au hazard selon la difficulté choisie et la grandeur de la grille. Les cases numérotées avertissent du nombre de mines qu’ils touchent du rebord ou du coin. Cliquer une case vide révèle d’un coup toutes les cases connectées. Cliquer une mine est un échet immédiat, mais de révéler toutes les cases vides ou numérotées est un succès.</value>
+  </data>
+  <data name="sessionStatistics.Header" xml:space="preserve">
+    <value>Résultâts</value>
+    <comment>top tab</comment>
+  </data>
+  <data name="tilesRevealed.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tuiles révélées</value>
+  </data>
+  <data name="timeIndicator.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Temps depuis le début du jeu</value>
+  </data>
+  <data name="winNoiseCredit1.Text" xml:space="preserve">
+    <value>Son Jingle Win par</value>
+  </data>
+  <data name="underCC.Text" xml:space="preserve">
+    <value>sous attribution Creative Commons</value>
+  </data>
+  <data name="restartButton.Content" xml:space="preserve">
+    <value>Recommencer</value>
+  </data>
+  <data name="startButton.Content" xml:space="preserve">
+    <value>Commencer</value>
+  </data>
+  <data name="newBadgeEarned.Text" xml:space="preserve">
+    <value>Objectif réussi!</value>
+  </data>
+  <data name="objectiveBadgesTitle.Text" xml:space="preserve">
+    <value>Objectifs</value>
+  </data>
+  <data name="reveal10000ObjectiveDescription" xml:space="preserve">
+    <value>Révèle 10 000 cases dans des jeux gagnés.</value>
+  </data>
+  <data name="reveal10000ObjectiveTitle" xml:space="preserve">
+    <value>Béni</value>
+  </data>
+  <data name="reveal1000ObjectiveDescription" xml:space="preserve">
+    <value>Révèle 1 000 cases dans des jeux gagnés.</value>
+  </data>
+  <data name="reveal1000ObjectiveTitle" xml:space="preserve">
+    <value>Poussin</value>
+  </data>
+  <data name="reveal100ObjectiveDescription" xml:space="preserve">
+    <value>Révèle 100 cases dans des jeux gagnés.</value>
+  </data>
+  <data name="reveal100ObjectiveTitle" xml:space="preserve">
+    <value>Bourgeon</value>
+  </data>
+  <data name="winDifficultObjectiveDescription" xml:space="preserve">
+    <value>Gagne un jeu sur ‘Difficile.’ Le jeu doit avoir une taille minimale de 10 cases.</value>
+  </data>
+  <data name="winDifficultObjectiveTitle" xml:space="preserve">
+    <value>Professionnel</value>
+  </data>
+  <data name="winDoctorateObjectiveDescription" xml:space="preserve">
+    <value>Gagne un jeu sur ‘Doctorat.’ Le jeu doit avoir une taille minimale de 10 cases.</value>
+  </data>
+  <data name="winDoctorateObjectiveTitle" xml:space="preserve">
+    <value>Érudit</value>
+  </data>
+  <data name="winSaturationObjectiveDescription" xml:space="preserve">
+    <value>Gagne un jeu sur ‘Saturation.’ Le jeu doit avoir une taille minimale de 10 cases.</value>
+  </data>
+  <data name="winSaturationObjectiveTitle" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="winSingleClickObjectiveDescription" xml:space="preserve">
+    <value>Gagne un jeu en un seul clic.</value>
+  </data>
+  <data name="winSingleClickObjectiveTitle" xml:space="preserve">
+    <value>Pure Chance</value>
+  </data>
+</root>
